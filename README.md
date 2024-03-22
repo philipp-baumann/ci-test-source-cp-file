@@ -3,7 +3,7 @@ creates an empty **trigger artefact file** with time stamp and pushes that to
 the `target_cp` branch of the target repository at
 [`philipp-baumann/ci-test-target-cp-file`](https://github.com/philipp-baumann/ci-test-target-cp-file).
 
-This test setup was motivated by the custom [the CI in`r-daily-source` branch at
+This test setup was motivated by [the `r-daily.yml` CI in`r-daily-source` branch at
 `b-rodrigues/rixpkgs`](https://github.com/b-rodrigues/nixpkgs/blob/r-daily-source/.github/workflows/r-daily.yml),
 which runs when pushing to a specific branch. The pushing to a specific branch
 can e.g. be done by a source repository with a push trigger CI like this one.
