@@ -26,3 +26,4 @@ jobs:
           destination-repository-name: 'nixpkgs'
           user-email: baumann-philipp@protonmail.com
           target-branch: r-daily-source
+          target-directory: _trigger_file
