@@ -1,4 +1,4 @@
-name: Push trigger file
+name: Push trigger file to philipp-baumann/nixpkgs
 
 on:
   push:
