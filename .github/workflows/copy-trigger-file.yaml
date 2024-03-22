@@ -10,13 +10,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: creates output
-        run:  touch _ci-trigger-file.txt # trigger file in source directory
+        run:  touch _trigger-file/_ci-trigger-file.txt # trigger file in source directory
       - name: Pushes to another repository
         uses: cpina/github-action-push-to-another-repository@main
         env:
           SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
         with:
-          source-directory: '.'
+          source-directory: '_trigger-file'
           destination-github-username: 'philipp-baumann'
           destination-repository-name: 'ci-test-target-cp-file'
           user-email: baumann-philipp@protonmail.com
