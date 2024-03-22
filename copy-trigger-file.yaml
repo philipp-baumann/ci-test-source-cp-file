@@ -1,0 +1,23 @@
+name: Push trigger file
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: creates output
+        run:  touch _ci-trigger-file.txt # trigger file in source directory
+      - name: Pushes to another repository
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.PAT_CP }}
+        with:
+          source-directory: '.'
+          destination-github-username: 'philipp-baumann'
+          destination-repository-name: 'ci-test-target-cp-file'
+          user-email: baumann-philipp@protonmail.com
+          target-branch: target_cp
