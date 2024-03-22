@@ -10,7 +10,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: creates output
-        run:  touch _trigger-file/_ci-trigger-file.txt # trigger file in source directory
+        run: |
+          rm -R _trigger-file/_trigger_*
+          touch _trigger-file/_trigger_$(date "+%Y-%m-%d_%H%M%S") # trigger file in source directory
       - name: Pushes to another repository
         uses: cpina/github-action-push-to-another-repository@main
         env:
