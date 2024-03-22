@@ -27,3 +27,4 @@ jobs:
           destination-repository-name: 'ci-test-target-cp-file'
           user-email: baumann-philipp@protonmail.com
           target-branch: target_cp
+          target-directory: _trigger_file
