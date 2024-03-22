@@ -17,5 +17,5 @@ action](https://cpina.github.io/push-to-another-repository-docs/setup.html#setup
   - `_trigger-file/_trigger_$(date "+%Y-%m-%d_%H%M%S")`
   - Created every given CRON-job interval, pushed to target, and then the folder
     and file is deleted in this source repo. Hence, the target repo will create
-    only the last successfull push file in the latest commit.
+    only the last successful push file in the latest commit.
   
