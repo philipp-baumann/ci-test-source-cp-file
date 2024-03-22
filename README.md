@@ -9,7 +9,7 @@ which runs when pushing to a specific branch. The pushing to a specific branch
 can e.g. be done by a source repository with a push trigger CI like this one.
 
 The action is used is based on
-[`cpina/github-action-push-to-another-repository`](https://github.com/cpina/github-action-push-to-another-repository](cpina/github-action-push-to-another-repository).
+[`cpina/github-action-push-to-another-repository`](cpina/github-action-push-to-another-repository).
 Pushing the trigger file of format `_trigger-file/_trigger_$(date "+%Y-%m-%d_%H%M%S")`
 from source to the root directory of the target repo is configured via a SSH
 deployment key. More details to set it up and more examples can be found in the [docs of the 
