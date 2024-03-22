@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: creates output
         run: |
-          mkdir -p _trigger-file
+          mkdir -p _trigger-file_nixpkgs
           [ ! -e _trigger-file_nixpkgs/_trigger_* ] || rm -R _trigger-file/_trigger_*
           touch _trigger-file_nixpkgs/_trigger_$(date "+%Y-%m-%d_%H%M%S") # trigger file in source directory
       - name: Pushes to another repository
